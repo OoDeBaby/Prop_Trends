@@ -28,8 +28,7 @@ def main():
     st.title("Basketball Player Filters App")
     
     st.write("""
-    This app runs `data.py` and `filters.py` to generate CSVs, then shows the results.
-    Click the button below to generate the CSVs and view the data.
+    Click Button, Get Money
     """)
     
     # Button to trigger the process
