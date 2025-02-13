@@ -28,7 +28,7 @@ def main():
     st.title("Basketball Player Filters App")
     
     st.write("""
-    Click Button, Get Money
+    Click Button, Get Money!
     """)
     
     # Button to trigger the process
