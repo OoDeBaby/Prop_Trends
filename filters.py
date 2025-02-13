@@ -63,9 +63,6 @@ for index, row in trends.iterrows():
         # Concatenate the new row to filtered_df
         filtered_df = pd.concat([filtered_df, new_row], ignore_index=True)
 
-# Display the filtered_df after Filter 1
-print(filtered_df)
-
 # FILTER 2 - PLAYER HAS HIT LINE 60% L10
 
 # Loop through the trends DataFrame
@@ -122,9 +119,6 @@ for index, row in trends.iterrows():
         
         # Concatenate the new row to filtered_df
         filtered_df = pd.concat([filtered_df, new_row], ignore_index=True)
-
-# Display the filtered_df after Filter 2
-print(filtered_df)
 
 # FILTER 3 - PLAYER HAS HIT LINE 60% L5
 
@@ -183,9 +177,6 @@ for index, row in trends.iterrows():
         # Concatenate the new row to filtered_df
         filtered_df = pd.concat([filtered_df, new_row], ignore_index=True)
 
-# Display the filtered_df after Filter 3
-print(filtered_df)
-
 # Filter 4 - H2H Has Hit 50% Overall
 
 # Loop through the trends DataFrame for head-to-head matchups
@@ -237,9 +228,6 @@ for index, row in trends.iterrows():
             'projection': [projection]
         })
         filtered_df = pd.concat([filtered_df, new_row], ignore_index=True)
-
-# Display the filtered DataFrame after Filter 4
-print(filtered_df)
 
 # FILTER 5 - PLAYER HAS HIT LINE 65% OF GAMES AT SITE THIS SEASON
 
@@ -370,9 +358,6 @@ for index, row in trends.iterrows():
         if not temp_df.empty:
             filtered_df = pd.concat([filtered_df, temp_df], ignore_index=True)
 
-# Display the final filtered DataFrame
-print(filtered_df)
-
 # Filter 6 - Player Season Average +-2 Points / +-1 Reb / +-1 Ast vs line
 
 # Loop through the trends DataFrame to process each player's lines
@@ -453,9 +438,6 @@ for index, row in trends.iterrows():
     if temp_df:
         temp_df = pd.DataFrame(temp_df)
         filtered_df = pd.concat([filtered_df, temp_df], ignore_index=True)
-
-# Display the final filtered DataFrame
-print(filtered_df)
 
 # Filter 7 - Must have hit line 70% L10 of home/away
 
@@ -582,8 +564,6 @@ for index, row in trends.iterrows():
     if temp_df:
         filtered_df = pd.concat([filtered_df, pd.DataFrame(temp_df)], ignore_index=True)
 
-# Display the final filtered DataFrame
-print(filtered_df)
 
 # Filter 8 - L5 Average must be 2pts/2reb/1.5/ast differential from line
 
@@ -665,9 +645,6 @@ for index, row in trends.iterrows():
     if temp_df:
         filtered_df = pd.concat([filtered_df, pd.DataFrame(temp_df)], ignore_index=True)
 
-# Display the final filtered DataFrame
-print(filtered_df)
-
 # Lists to hold the rows for players hitting 8, 7, and 6 filters
 csv_rows_8 = []
 csv_rows_7 = []
@@ -721,3 +698,5 @@ df_6_filters = pd.DataFrame(csv_rows_6)
 df_8_filters.to_csv('8_Filters.csv', index=False)
 df_7_filters.to_csv('7_Filters.csv', index=False)
 df_6_filters.to_csv('6_Filters.csv', index=False)
+
+print('All Plays Added to CSVs')
