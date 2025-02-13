@@ -6,7 +6,6 @@ import pytz
 
 pd.set_option('display.max_rows', 500)
 
-def run_data():
     # Define the API endpoint for prop trends
     url = "https://api.props.cash/nba/prop-trends"
 
