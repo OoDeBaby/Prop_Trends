@@ -17,7 +17,7 @@ for index, row in trends.iterrows():
     
     # Check if any of the hit percentages for points, rebounds, or assists is >= 55% or <= 45%
     if points_hit_percentage >= 55 or rebounds_hit_percentage >= 55 or assists_hit_percentage >= 55 or \
-       points_hit_percentage <= 45 or rebounds_hit_percentage <= 45 or assists_hit_percentage <= 45:
+    points_hit_percentage <= 45 or rebounds_hit_percentage <= 45 or assists_hit_percentage <= 45:
         
         # Determine the stat that met the condition (points, rebounds, or assists)
         if points_hit_percentage >= 55:
@@ -77,7 +77,7 @@ for index, row in trends.iterrows():
     
     # Check if any of the hit percentages for points, rebounds, or assists is >= 60% or <= 40% in the last 10 games
     if points_hit_percentage_l10 >= 60 or rebounds_hit_percentage_l10 >= 60 or assists_hit_percentage_l10 >= 60 or \
-       points_hit_percentage_l10 <= 40 or rebounds_hit_percentage_l10 <= 40 or assists_hit_percentage_l10 <= 40:
+    points_hit_percentage_l10 <= 40 or rebounds_hit_percentage_l10 <= 40 or assists_hit_percentage_l10 <= 40:
         
         # Determine the stat that met the condition (points, rebounds, or assists)
         if points_hit_percentage_l10 >= 60:
@@ -137,7 +137,7 @@ for index, row in trends.iterrows():
     
     # Check if any of the hit percentages for points, rebounds, or assists is >= 60% or <= 40% in the last 5 games
     if points_hit_percentage_l5 >= 60 or rebounds_hit_percentage_l5 >= 60 or assists_hit_percentage_l5 >= 60 or \
-       points_hit_percentage_l5 <= 40 or rebounds_hit_percentage_l5 <= 40 or assists_hit_percentage_l5 <= 40:
+    points_hit_percentage_l5 <= 40 or rebounds_hit_percentage_l5 <= 40 or assists_hit_percentage_l5 <= 40:
         
         # Determine the stat that met the condition (points, rebounds, or assists)
         if points_hit_percentage_l5 >= 60:
@@ -721,5 +721,3 @@ df_6_filters = pd.DataFrame(csv_rows_6)
 df_8_filters.to_csv('8_Filters.csv', index=False)
 df_7_filters.to_csv('7_Filters.csv', index=False)
 df_6_filters.to_csv('6_Filters.csv', index=False)
-
-print("CSV files created for players hitting 8, 7, and 6 filters with improved formatting.")
